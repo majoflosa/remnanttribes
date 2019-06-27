@@ -1,0 +1,167 @@
+===========================================================
+|   GENERALS                                              |
+===========================================================
+* Call to Action: subscribe to newsletter?
+    - Offer a reward: pdf with prologue, character guide, 
+        and behind the scenes
+    - Footer cta: on normal pages, subscription
+* Add update date to all pages under header ---------- DONE
+* Footer widgets
+    - Nav Menu
+* Make general index section as slider?
+
+===========================================================
+|   HOME PAGE                                             |
+===========================================================
+* CTA background image needs to be darker ------------ DONE
+* Back to top button --------------------------------- DONE
+* About summary -------------------------------------- DONE
+
+===========================================================
+|   COMIC PAGES
+===========================================================
+* First Page and Last Page links --------------------- DONE
+
+===========================================================
+|   WORLD                                                 |
+===========================================================
+* Agenes Image --------------------------------------- DONE
+* Meadow Image --------------------------------------- DONE
+* Citadel Image -------------------------------------- DONE
+
+===========================================================
+|   CHARACTERS                                            |
+===========================================================
+* Change header banner?
+* Beor description ----------------------------ISFJ--- DONE
+* Iva description -----------------------------ESTJ--- DONE
+* Kyoji description ---------------------------INFP--- DONE
+* Liev ----------------------------------------ESTP--- DONE
+* Walt ----------------------------------------INTJ--- skip?
+* Stromm --------------------------------------ISTJ--- 
+* Dox -----------------------------------------ENTJ--- 
+* Fher ----------------------------------------INTP---
+* Drok ----------------------------------------ESFP---
+
+FUTURE CHARS
+* Drelik --------------------------------------ENTP---
+* Heremya -------------------------------------ISFP---
+* Falon ---------------------------------------ENTP---
+* Hebba ---------------------------------------****---
+* Gart ----------------------------------------****---
+* Gena ----------------------------------------****---
+* Loyd ----------------------------------------****---
+* Vilkar --------------------------------------****---
+* Gaelin --------------------------------------****---
+* Bheron --------------------------------------****---
+
+===========================================================
+|   BLOG POSTS                                            |
+===========================================================
+* Share buttons -------------------------------------- DONE
+* write Blog post: reference library ----------------- DONE
+
+===========================================================
+|   ABOUT PAGE                                            |
+===========================================================
+* About the Project ---------------------------------- DONE
+
+===========================================================
+|   CONTACT PAGE                                          |
+===========================================================
+* Add email link ------------------------------------- DONE
+* Add invitation to social media --------------------- DONE
+
+===========================================================
+|   MOBILE STYLES                                         |
+===========================================================
+* Home ----------------------------------------------- DONE
+* Index ---------------------------------------------- DONE
+* Comic Pages ---------------------------------------- DONE
+* Explore -------------------------------------------- DONE
+* World ---------------------------------------------- DONE
+* Characters ----------------------------------------- DONE
+* History -------------------------------------------- DONE
+* Blog ----------------------------------------------- DONE
+* Single Post ---------------------------------------- DONE
+* Pages ---------------------------------------------- DONE
+
+---------------------- Migration Edits -----------------------
+* Next update date
+* About page: mentions "Nov 1 2016" as launch date. 
+* Change post and page published dates
+* URL of About banner image points to localhost
+* Map location images point to localhost
+* RSS feed url on homepage and widgets point to localhost
+* SEO:
+    - Yoast plugin
+    - Akismet plugin
+    - Google XML sitemaps plugin
+    - Connect to Google Analytics and Search console
+    - rich snippets?
+
+---------------------- Future Edits -----------------------
+
+* Future post subjects:
+
+* Characters:
+    - Drelik
+    - Heremya
+    - Dox
+    - Bheron
+
+* Add a site-wide Patreon link (fixed to right of screen?)
+
+===========================================================
+|   COMMUNITY SECTION                                     |
+===========================================================
+* Art of the Allies: A gallery of art by comissioned 
+    artists and fans
+* Supporters: 
+    - Reviews slider?
+    - A grid of links to people who support on Patreon 
+        (commissioned artists?)
+* How to Support:
+    - Patreon
+    - Buy my art on Gumroad
+    - Buy my art on Society 6
+    - PayPal tips
+    - Other ways: connect and share on social media, 
+        comments & feedback, send fan art
+
+===========================================================
+|   PATREON CAMPAIGN                                      |
+===========================================================
+* $1 - Warrior
+    > Access to Patreon posts: panel process sketches, resources?    
+    > Your name will be forever engraved with eternal gratitude
+        in the halls of the Agenes website Supporters page
+
+* $2 - Ranger - All previous rewards plus:
+    > See new pages early
+    > Sneak peeks, behind the scenes of future pages
+
+* $5 - Commander - All previous rewards plus:
+    > Download a monthly psd of a comic page
+    > Your name on supporters page will have a link to a
+        site of your choice
+    > PDF of Chapter collections of Hi Res pages with exclusive
+        behind the scenes process art and comments
+
+* $10 - Champion - All previous rewards plus:
+    > Download a monthly psd of personal drawings
+    > Access to exclusive online videos of recorded drawing process
+        of comic pages
+
+* $25 - Hero - All previous rewards plus:
+    > Monthly Q&A video?
+    > Download videos of recorded drawing process
+    > Featured Supporter with avatar and links to your social media 
+        and website on Supporters page
+
+* $75 - (Limit to 4) Legend - All previous rewards plus:
+    > Invitation to a one-on-one 1-hour live session per month
+        (skype/google hangout)
+    > Featured Supporter with avatar and links to social media 
+        and website on Home page AND Supporters page 
+    

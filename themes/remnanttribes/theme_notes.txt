@@ -1,0 +1,7 @@
+Custom post types:
+- Comic Pages
+- Characters
+- map locations
+
+Custom taxonomies
+- chapters

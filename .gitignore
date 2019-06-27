@@ -1,0 +1,5 @@
+node_modules
+wp_content/themes/remnanttribes/node_modules
+wp_content/themes/remnanttribes/.sass-cache
+
+.DS_Store

@@ -1,5 +1,5 @@
 <?php
-// var_dump( get_post_format_slugs() );
+// var_dump( get_stylesheet_directory_uri() );
 
 define( 'REM_DEV_MODE', $_SERVER['HTTP_HOST'] === 'localhost:8888' );
 define( 'REM_THEME_URI', get_theme_file_uri() );
@@ -12,6 +12,8 @@ define( 'REM_THEME_URI', get_theme_file_uri() );
  * Theme features support
  */
 function rem_theme_features() {
+    load_theme_textdomain( 'remnanttribes', get_template_directory() . '/languages' );
+
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'post-formats', get_post_format_slugs() );
     add_theme_support( 
@@ -33,7 +35,7 @@ add_action( 'after_setup_theme', 'rem_theme_features' );
  */
 function rem_menus() {
     register_nav_menus( array(
-        'main_menu' => __( 'Main Menu' )
+        'main_menu' => __( 'Main Menu', 'remnanttribes' )
     ) );
 }
 add_action( 'init', 'rem_menus' );
@@ -43,10 +45,10 @@ add_action( 'init', 'rem_menus' );
  */
 function rem_sidebars() {
     register_sidebar( array(
-        'name'  => __( 'Sidebar' ),
+        'name'  => __( 'Sidebar', 'remnanttribes' ),
         'id'    => 'main-sidebar',
         'class' => 'main-sidebar',
-        'description'   => __( 'Main sidebar for blog and static pages with default template' ),
+        'description'   => __( 'Main sidebar for blog and static pages with default template', 'remnanttribes' ),
         'before_widget' => '<li id="%1$s" class="widget main-sidebar-widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h3 class="widget-title main-sidebar-widget-title>',
@@ -96,13 +98,13 @@ add_action( 'init', 'rem_register_posttypes' );
 
 // Custom taxonomies
 require 'include/custom-taxonomies/chapter.php';
-require 'include/custom-taxonomies/maplocation.php';
-require 'include/custom-taxonomies/mapevent.php';
+require 'include/custom-taxonomies/mappin.php';
+// require 'include/custom-taxonomies/mapevent.php';
 
 function rem_register_taxonomies() {
     rem_taxonomy_chapter();
-    rem_taxonomy_location();
-    rem_taxonomy_mapevent();
+    rem_taxonomy_mappin();
+    // rem_taxonomy_mapevent();
     
     flush_rewrite_rules();
 }

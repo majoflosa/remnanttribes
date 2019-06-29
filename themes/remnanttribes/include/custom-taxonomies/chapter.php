@@ -42,7 +42,7 @@ function rem_taxonomy_chapter() {
         'show_in_menu'          => true,
         'show_in_nav_menus'     => true,
         'show_in_rest'          => true,
-        'rest_base'             => 'mappin',
+        'rest_base'             => 'chapter',
         'rest_controller_base'  => 'WP_REST_Terms_Controller',
         'show_tagcloud'         => false,
         'show_in_quick_edit'    => true,
@@ -54,7 +54,7 @@ function rem_taxonomy_chapter() {
             'assign_terms'
         ),
         'rewrite'               => true,
-        'query_var'             => 'mappin',
+        'query_var'             => 'chapter',
     );
 
     register_taxonomy( 'chapter', 'comicpage', $args );

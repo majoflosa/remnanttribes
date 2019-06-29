@@ -1,8 +1,9 @@
 <?php
-// var_dump( get_stylesheet_directory_uri() );
+// var_dump( REM_THEME_PATH );
 
 define( 'REM_DEV_MODE', $_SERVER['HTTP_HOST'] === 'localhost:8888' );
 define( 'REM_THEME_URI', get_theme_file_uri() );
+define( 'REM_THEME_PATH', get_theme_file_path() );
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
  *  Theme Setup
@@ -87,25 +88,32 @@ add_action( 'wp_enqueue_scripts', 'rem_enqueue' );
 // Custom post types
 require 'include/custom-post-types/comicpage.php';
 require 'include/custom-post-types/mappoint.php';
+require 'include/custom-post-types/character.php';
 
 function rem_register_posttypes() {
     rem_posttype_comicpage();
     rem_posttype_mappoint();
+    rem_posttype_character();
 
     flush_rewrite_rules();
 }
 add_action( 'init', 'rem_register_posttypes' );
 
 // Custom taxonomies
-require 'include/custom-taxonomies/chapter.php';
-require 'include/custom-taxonomies/mappin.php';
-// require 'include/custom-taxonomies/mapevent.php';
+require REM_THEME_PATH . '/include/custom-taxonomies/chapter.php';
+require REM_THEME_PATH . '/include/custom-taxonomies/mappin.php';
+require REM_THEME_PATH . '/include/custom-taxonomies/tribe.php';
 
 function rem_register_taxonomies() {
     rem_taxonomy_chapter();
     rem_taxonomy_mappin();
-    // rem_taxonomy_mapevent();
+    rem_taxonomy_tribe();
     
     flush_rewrite_rules();
 }
 add_action( 'init', 'rem_register_taxonomies' );
+
+
+// filter hooks
+require REM_THEME_PATH . '/include/hooks/filters.php';
+

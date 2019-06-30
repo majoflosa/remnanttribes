@@ -1,13 +1,15 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
 
 module.exports = {
     entry: ['@babel/polyfill', './assets/src/js/index.js'],
     
     output: {
-        path: path.join(__dirname, 'assets/dist/main'),
-        filename: 'main.js'
+        // path: path.join(__dirname, 'assets/dist/main'),
+        path: __dirname,
+        filename: 'assets/dist/js/main.js'
     },
     
     mode: process.env.NODE_ENV || 'production',
@@ -34,9 +36,10 @@ module.exports = {
 
     plugins: [
         new MiniCssExtractPlugin({
-            path: path.join(__dirname, 'assets/dist/main'),
-            filename: 'main.css',
-            chunkFilename: '[id].css'
+            // path: path.join(__dirname, 'assets/dist/main'),
+            filename: 'assets/dist/css/main.css',
+            filename: 'style.css',
+            // chunkFilename: '[id].css'
         }),
         new BrowserSyncPlugin({
             files: [
@@ -44,6 +47,7 @@ module.exports = {
                 './**/*.php'
             ],
             proxy: 'http://localhost:8888'
-        })
+        }),
+        new OptimizeCSSAssetsPlugin()
     ]
 }

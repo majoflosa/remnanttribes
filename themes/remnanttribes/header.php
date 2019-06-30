@@ -16,7 +16,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
     <header class="header">
         <div class="header-brand">
@@ -27,7 +27,7 @@
                 <a href="<?php echo home_url(); ?>"><?php bloginfo( 'title' ); ?></a>
             </h1>
         </div>
-        
+
         <?php 
             $menu_args = array(
                 'menu_class'        => 'header-nav-list',
@@ -42,6 +42,6 @@
         ?>
     </header>
 
-    <main class="wrap">
-        <h1>Main Content</h1>
+    <main class="main has-sidebar">
+        
     

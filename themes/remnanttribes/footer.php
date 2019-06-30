@@ -9,7 +9,7 @@
         </main><!-- end .wrap -->
 
         <footer class="footer">
-        
+            <p>&copy; Copyright 2015 Mauricio J Flores. All rights reserved.</p>
         </footer>
 
         <?php wp_footer(); ?>

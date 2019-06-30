@@ -1,5 +1,5 @@
 <?php
-// var_dump( REM_THEME_PATH );
+// var_dump(  );
 
 define( 'REM_DEV_MODE', $_SERVER['HTTP_HOST'] === 'localhost:8888' );
 define( 'REM_THEME_URI', get_theme_file_uri() );
@@ -50,9 +50,9 @@ function rem_sidebars() {
         'id'    => 'main-sidebar',
         'class' => 'main-sidebar',
         'description'   => __( 'Main sidebar for blog and static pages with default template', 'remnanttribes' ),
-        'before_widget' => '<li id="%1$s" class="widget main-sidebar-widget %2$s">',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h3 class="widget-title main-sidebar-widget-title>',
+        'before_widget' => '<div id="%1$s" class="widget main-sidebar-widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title main-sidebar-widget-title">',
         'after_title'   => '</h3>'
     ) );
 }
@@ -66,14 +66,13 @@ function rem_enqueue() {
     $version = REM_DEV_MODE ? time() : null;
 
     // styles
-    wp_register_style( 'rem_theme', REM_THEME_URI . '/assets/dist/main/main.css', array(), $version );
     wp_register_style( 'rem_stylesheet', REM_THEME_URI . '/style.css', array(), $version );
 
     wp_enqueue_style( 'rem_theme' );
     wp_enqueue_style( 'rem_stylesheet' );
 
     // scripts
-    wp_register_script( 'rem_main', REM_THEME_URI . '/assets/dist/main/main.js', array(), $version );
+    wp_register_script( 'rem_main', REM_THEME_URI . '/assets/dist/js/main.js', array(), $version );
 
     wp_enqueue_script( 'rem_main' );
 }
@@ -86,9 +85,9 @@ add_action( 'wp_enqueue_scripts', 'rem_enqueue' );
  * = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 // Custom post types
-require 'include/custom-post-types/comicpage.php';
-require 'include/custom-post-types/mappoint.php';
-require 'include/custom-post-types/character.php';
+require REM_THEME_PATH . '/include/custom-post-types/comicpage.php';
+require REM_THEME_PATH . '/include/custom-post-types/mappoint.php';
+require REM_THEME_PATH . '/include/custom-post-types/character.php';
 
 function rem_register_posttypes() {
     rem_posttype_comicpage();

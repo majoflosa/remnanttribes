@@ -46,7 +46,7 @@ module.exports = {
                 './*.php',
                 './**/*.php'
             ],
-            proxy: 'http://localhost:8888'
+            proxy: 'http://remnanttribes.local'
         }),
         new OptimizeCSSAssetsPlugin()
     ]

@@ -1,5 +1,6 @@
 node_modules
 wp_content/themes/remnanttribes/node_modules
 wp_content/themes/remnanttribes/.sass-cache
+debug.log
 
 .DS_Store

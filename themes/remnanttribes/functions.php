@@ -84,35 +84,6 @@ add_action( 'wp_enqueue_scripts', 'rem_enqueue' );
  *  Files to include for additional functionality
  * = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-// Custom post types
-require REM_THEME_PATH . '/include/custom-post-types/comicpage.php';
-require REM_THEME_PATH . '/include/custom-post-types/mappoint.php';
-require REM_THEME_PATH . '/include/custom-post-types/character.php';
-
-function rem_register_posttypes() {
-    rem_posttype_comicpage();
-    rem_posttype_mappoint();
-    rem_posttype_character();
-
-    flush_rewrite_rules();
-}
-add_action( 'init', 'rem_register_posttypes' );
-
-// Custom taxonomies
-require REM_THEME_PATH . '/include/custom-taxonomies/chapter.php';
-require REM_THEME_PATH . '/include/custom-taxonomies/mappin.php';
-require REM_THEME_PATH . '/include/custom-taxonomies/tribe.php';
-
-function rem_register_taxonomies() {
-    rem_taxonomy_chapter();
-    rem_taxonomy_mappin();
-    rem_taxonomy_tribe();
-    
-    flush_rewrite_rules();
-}
-add_action( 'init', 'rem_register_taxonomies' );
-
-
 // filter hooks
 require REM_THEME_PATH . '/include/hooks/filters.php';
 

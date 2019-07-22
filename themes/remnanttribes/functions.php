@@ -1,7 +1,7 @@
 <?php
-// var_dump(  );
+// var_dump( $_SERVER['HTTP_HOST'] );
 
-define( 'REM_DEV_MODE', $_SERVER['HTTP_HOST'] === 'localhost:8888' );
+define( 'REM_DEV_MODE', $_SERVER['HTTP_HOST'] === 'remnanttribes.local' );
 define( 'REM_THEME_URI', get_theme_file_uri() );
 define( 'REM_THEME_PATH', get_theme_file_path() );
 

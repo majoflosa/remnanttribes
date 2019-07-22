@@ -42,6 +42,9 @@
         ?>
     </header>
 
-    <main class="main has-sidebar">
+    <main class="main">
         
-    
+    <?php 
+    // global $wp;
+    // var_dump( $wp->request );
+    ?>

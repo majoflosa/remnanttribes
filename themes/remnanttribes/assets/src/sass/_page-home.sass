@@ -1,5 +1,8 @@
 .page-template-home 
 
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+    /* = = Intro Section = = = = = = = = = = = = = = = = = = */
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = */
     .intro-section
         font-size: 1.25em
         font-size: 1.25rem
@@ -20,6 +23,10 @@
             width: 600px
             height: 400px
 
+    
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+    /* = = Explore Section = = = = = = = = = = = = = = = = = */
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = */
     .explore-section
         background: $gray-30
         padding: 30px
@@ -41,4 +48,52 @@
 
             &:nth-child(even)
                 flex-direction: row-reverse
-            // .explore-section-row
+                
+                .explore-section-row-text
+                    text-align: right
+
+        
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+    /* = = Blog Section  = = = = = = = = = = = = = = = = = = */
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+    .blog-section
+
+        &-list
+            +layout-flex(center, initial)
+
+        &-item
+            flex: 0 0 30%
+            margin: 0 0.5%
+
+        &-footer
+            margin: 30px auto
+            text-align: center
+
+
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+    /* = = Midbanner Section = = = = = = = = = = = = = = = = */
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+    .midbanner-section
+        min-height: 500px
+        background: url('http://remnanttribes.com/wp-content/themes/agenes/images/midbanner.jpg')
+        background-attachment: fixed
+        background-size: 100%
+        background-position: center
+
+    
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+    /* = = About Section = = = = = = = = = = = = = = = = = = */
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+    .about-section
+
+        &-body
+            text-align: center
+        &-image
+            display: block
+            width: 90%
+            max-width: 600px
+            margin: 0 auto
+            
+        &-footer
+            text-align: center
+            margin: 30px auto 0

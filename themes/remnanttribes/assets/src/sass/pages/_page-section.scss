@@ -1,0 +1,21 @@
+.page-section {
+    padding: 50px 0;
+    position: relative;
+    
+    &__inner {
+        max-width: $content-width;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    &__inner.full-width {
+        max-width: none;
+        width: auto;
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    // &__title
+}

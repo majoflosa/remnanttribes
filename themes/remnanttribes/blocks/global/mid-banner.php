@@ -1,0 +1,1 @@
+<div class="page-section home-section midbanner-section"></div>

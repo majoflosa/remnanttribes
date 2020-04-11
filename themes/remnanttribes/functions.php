@@ -72,7 +72,7 @@ function rem_enqueue() {
     wp_enqueue_style( 'rem_stylesheet' );
 
     // scripts
-    wp_register_script( 'rem_main', REM_THEME_URI . '/assets/dist/js/main.js', array(), $version );
+    wp_register_script( 'rem_main', REM_THEME_URI . '/assets/dist/js/main.js', array('jquery'), $version );
 
     wp_enqueue_script( 'rem_main' );
 }

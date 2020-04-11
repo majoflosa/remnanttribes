@@ -16,7 +16,9 @@
 @import './layout/footer';
 
 // pages 
+@import './pages/page-section';
 @import './pages/home/home';
 
 // components
 @import './components/hero';
+@import './components/cta';

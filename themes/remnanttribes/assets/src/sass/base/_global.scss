@@ -35,25 +35,3 @@ img {
         }
     }
 }
-
-.page-section {
-    padding: 50px 0;
-    position: relative;
-    
-    &-inner {
-        max-width: $content-width;
-        width: 90%;
-        margin: 0 auto;
-    }
-    
-    &-inner.full-width {
-        max-width: none;
-        width: auto;
-    }
-
-    &-header {
-        text-align: center;
-    }
-
-    // &-title
-}

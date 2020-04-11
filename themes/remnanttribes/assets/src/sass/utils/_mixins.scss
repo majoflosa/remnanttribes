@@ -1,0 +1,43 @@
+@mixin font-line-size($font-size, $line-height) {
+    font-size: ($font-size / $base-pixel-size) * 1rem;
+    line-height: $line-height / $font-size;
+}
+
+@mixin breakpoint($bp, $isMaxWidth: false, $isScreenOnly: true) {
+    $media-query: get-breakpoint-query($bp, $isMaxWidth);
+  
+    @if $isScreenOnly {
+        $media-query: "screen and #{$media-query}";
+    }
+  
+    @media #{$media-query} {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+@mixin background-cover() {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+  
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin layout-flex($justify-content: initial, $align-items: center, $flex-direction: initial, $flex-wrap: wrap ) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+}

@@ -19,7 +19,7 @@ module.exports = {
     module: {
         rules: [
             { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/, query: { presets: ['@babel/env'] } },
-            { test: /.sass$/, use: [
+            { test: /.s(c|a)ss$/, use: [
                 // 'style-loader', 
                 {
                     loader: MiniCssExtractPlugin.loader,

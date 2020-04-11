@@ -1,0 +1,44 @@
+$header-bg: $gray-70;
+$header-text-color: $gray-10;
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    // background: $header-bg
+    color: #ffffff;
+    @include layout-flex(space-between, center);
+
+    &-brand {
+        @include layout-flex(initial, center);
+    }
+
+    &-nav {
+        &-list, .sub-menu {
+            list-style: none;
+        }
+
+        &-list {
+            @include layout-flex(initial, initial);
+        }
+
+        &-item {
+            position: relative;
+            margin: 0 25px;
+
+            &:hover {
+                .sub-menu {
+                    display: block;
+                }
+            }
+        }
+
+        .sub-menu {
+            position: absolute;
+            background: darken($header-bg, 10%);
+            padding: 0;
+            display: none;
+        }
+    }
+}
+

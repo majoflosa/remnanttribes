@@ -87,3 +87,11 @@ add_action( 'wp_enqueue_scripts', 'rem_enqueue' );
 // filter hooks
 require REM_THEME_PATH . '/include/hooks/filters.php';
 
+
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+ *  Files to include for additional admin-side functionality
+ * = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+// gutenberg blocks
+require REM_THEME_PATH . '/admin/gutenberg/init.php';

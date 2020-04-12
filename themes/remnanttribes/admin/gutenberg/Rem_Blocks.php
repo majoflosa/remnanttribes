@@ -19,18 +19,26 @@ class Rem_Blocks {
     }
 
     public function set_block_attributes( $block_name, $attributes ) {
+        if ( empty($this->blocks[$block_name]) ) return false;
+
         $this->blocks[$block_name]['attributes'] = $attributes;
     }
 
     public function get_block_attributes( $block_name ) {
+        if ( empty($this->blocks[$block_name]) ) return false;
+
         return $this->blocks[$block_name]['attributes'];
     }
     
     public function set_block_content( $block_name, $content ) {
+        if ( empty($this->blocks[$block_name]) ) return false;
+
         $this->blocks[$block_name]['content'] = $content;
     }
 
     public function get_block_content( $block_name ) {
+        if ( empty($this->blocks[$block_name]) ) return false;
+        
         return $this->blocks[$block_name]['content'];
     }
 

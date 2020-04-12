@@ -113,7 +113,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
 
+
+
+ // import { more } from '@wordpress/icons';
 
 var blockStyle = {
   backgroundColor: '#f5f5f5',
@@ -122,20 +129,78 @@ var blockStyle = {
 };
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('rem-blocks/test-block', {
   title: 'Custom Block Test',
+  description: 'A simple block to use as reference for development.',
   icon: 'smiley',
   category: 'layout',
-  example: {},
+  // attributes: {
+  //     attr_test: {
+  //         type: 'string',
+  //         source: 'text',
+  //         default: 'This is the default text',
+  //         selector: '.test-source',
+  //         // selector: 'p',
+  //     }
+  // },
+  // example: {
+  //     attributes: {
+  //         content: 'Hello World',
+  //     }
+  // },
+  keywords: ['Test', 'Example'],
+  supports: {
+    html: false,
+    customClassName: false
+  },
   edit: function edit(props) {
-    console.log(props);
-    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    console.log(props.attributes);
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
+      title: "My Block Settings"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "My Panel Inputs and Labels")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["TextControl"], {
+      label: "This is the label",
+      help: "These are some instructions",
+      value: props.attributes.attr_test,
+      onChange: function onChange(newValue) {
+        return props.setAttributes({
+          attr_test: newValue
+        });
+      }
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["SelectControl"], {
+      label: "This is a selector",
+      help: "These are instructions for the selector",
+      value: "option-1",
+      options: [{
+        value: 'option-1',
+        label: 'Option 1'
+      }, {
+        value: 'option-2',
+        label: 'Option 2'
+      }]
+    }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: props.className
-    }, "Hello, World!");
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Using an attribute: ", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+      className: "test-source"
+    }, props.attributes.attr_test)))];
+  },
+  save: function save() {
+    return null;
   } // save: ( props ) => <div className={props.className}>Hello, World!</div>,
 
-}); // registerBlockStyle( 'rem-blocks/test-block', {
-//     name: 'style-1',
-//     label: 'Style 1'
-// });
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockStyle"])('rem-blocks/test-block', {
+  name: 'style-1',
+  label: 'Style 1'
+});
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!**********************************************!*\
+  !*** external {"this":["wp","blockEditor"]} ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["blockEditor"]; }());
 
 /***/ }),
 
@@ -147,6 +212,17 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('rem
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["wp"]["blocks"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!*********************************************!*\
+  !*** external {"this":["wp","components"]} ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["components"]; }());
 
 /***/ }),
 
